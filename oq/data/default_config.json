@@ -1,0 +1,33 @@
+{
+  "import_config": {
+    "auto_import_to_root": true,
+    "module_order": [
+      "np",
+      "pd",
+      "sp",
+      "plt",
+      "sns",
+      "sk",
+      "xgb",
+      "lgb",
+      "torch",
+      "tf",
+      "px",
+      "sm"
+    ],
+    "enabled_modules": {
+      "np": true,
+      "pd": true,
+      "sp": true,
+      "plt": true,
+      "sns": true,
+      "sk": true,
+      "xgb": true,
+      "lgb": true,
+      "torch": true,
+      "tf": true,
+      "px": true,
+      "sm": true
+    }
+  }
+}
