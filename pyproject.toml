@@ -163,3 +163,18 @@ doctest_optionflags = [
     "NORMALIZE_WHITESPACE",
     "ELLIPSIS",
 ]
+filterwarnings = [
+    # Ignore all deprecation warnings from guide package
+    "ignore:.*:DeprecationWarning:guide.*",
+    # Ignore scipy deprecation warnings from guide package
+    "ignore:.*scipy\\.stats\\.stats.*:DeprecationWarning:guide.*",
+    "ignore:.*scipy\\.stats\\.morestats.*:DeprecationWarning:guide.*",
+    "ignore:.*scipy\\.stats\\.kde.*:DeprecationWarning:guide.*",
+    "ignore:.*scipy\\.signal\\.waveforms.*:DeprecationWarning:guide.*",
+    "ignore:.*scipy\\.stats\\.mstats_basic.*:DeprecationWarning:guide.*",
+    "ignore:.*scipy\\.stats\\.mstats_extras.*:DeprecationWarning:guide.*",
+    "ignore:.*scipy\\.sparse\\.csc.*:DeprecationWarning:guide.*",
+    "ignore:.*scipy\\.fftpack\\.basic.*:DeprecationWarning:guide.*",
+    # Ignore torch distributed warnings
+    "ignore:.*torch\\.distributed\\.reduce_op.*:FutureWarning",
+]

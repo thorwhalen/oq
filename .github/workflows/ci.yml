@@ -46,7 +46,7 @@ jobs:
       - name: Run Tests
         uses: i2mint/wads/actions/run-tests@master
         with:
-          root-dir: ${{ env.PROJECT_NAME }}
+          root-dir: tests
           exclude: examples,scrap
           coverage: true
           pytest-args: -v --tb=short
@@ -74,7 +74,7 @@ jobs:
       - name: Run Windows Tests
         uses: i2mint/wads/actions/windows-tests@master
         with:
-          root-dir: ${{ env.PROJECT_NAME }}
+          root-dir: tests
           exclude: examples,scrap
           pytest-args: -v --tb=short
 

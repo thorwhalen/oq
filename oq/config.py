@@ -55,9 +55,17 @@ def get_user_config() -> Dict[str, Any]:
     from .util import get_config
 
     with suppress(Exception):
-        user_config = get_config("import_config")
-        if user_config:
-            return {"import_config": user_config}
+        # Only try to get config if it exists, don't prompt
+        import os
+        from config2py import get_app_config_folder
+
+        config_dir = os.environ.get('OQ_APP_DATA_DIR', get_app_config_folder('oq'))
+        config_file = os.path.join(config_dir, 'import_config.json')
+
+        if os.path.exists(config_file):
+            user_config = get_config("import_config")
+            if user_config:
+                return {"import_config": user_config}
 
     return {}
 

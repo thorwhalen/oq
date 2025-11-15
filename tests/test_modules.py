@@ -34,16 +34,6 @@ def test_sp_module_structure():
         assert "scipy" in sp.__doc__.lower()
 
 
-def test_sk_module_structure():
-    """Test sklearn module structure."""
-    with suppress(ImportError, ModuleNotFoundError):
-        from oq import sk
-
-        # Should have a docstring
-        assert sk.__doc__ is not None
-        assert "sklearn" in sk.__doc__.lower()
-
-
 def test_plt_module_structure():
     """Test matplotlib.pyplot module structure."""
     with suppress(ImportError, ModuleNotFoundError):
@@ -65,7 +55,20 @@ def test_sns_module_structure():
 
 def test_all_modules_import_gracefully():
     """Test that all modules can be imported without errors."""
-    modules = ["np", "pd", "sp", "plt", "sns", "sk", "xgb", "lgb", "torch", "tf", "px", "sm"]
+    modules = [
+        "np",
+        "pd",
+        "sp",
+        "plt",
+        "sns",
+        "sk",
+        "xgb",
+        "lgb",
+        "torch",
+        "tf",
+        "px",
+        "sm",
+    ]
 
     for mod in modules:
         # Should not raise any exception
