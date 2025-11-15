@@ -4,6 +4,14 @@ requires = [
 ]
 build-backend = "hatchling.build"
 
+[tool.hatch.build.targets.sdist]
+include = [
+    "/oq",
+    "/tests",
+    "/README.md",
+    "/LICENSE",
+]
+
 [project]
 name = "oq"
 version = "0.0.3"
@@ -89,7 +97,15 @@ all = [
     "statsmodels>=0.13.0",
 ]
 
-# Development
+# Development and Testing
+test = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+testing = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
 dev = [
     "pytest>=7.0",
     "pytest-cov>=4.0",
