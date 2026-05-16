@@ -59,8 +59,8 @@ def get_user_config() -> Dict[str, Any]:
         import os
         from config2py import get_app_config_folder
 
-        config_dir = os.environ.get('OQ_APP_DATA_DIR', get_app_config_folder('oq'))
-        config_file = os.path.join(config_dir, 'import_config.json')
+        config_dir = os.environ.get("OQ_APP_DATA_DIR", get_app_config_folder("oq"))
+        config_file = os.path.join(config_dir, "import_config.json")
 
         if os.path.exists(config_file):
             user_config = get_config("import_config")

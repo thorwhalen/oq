@@ -7,7 +7,7 @@ include = ["/oq", "/tests", "/README.md", "/LICENSE"]
 
 [project]
 name = "oq"
-version = "0.0.3"
+version = "0.0.5"
 description = "Objects Quickly - AI tools at your finger tips"
 readme = "README.md"
 requires-python = ">=3.10"

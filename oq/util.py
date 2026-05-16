@@ -7,7 +7,7 @@ from functools import partial
 from config2py import simple_config_getter, get_app_config_folder, process_path
 
 
-pkg_name = 'oq'
+pkg_name = "oq"
 
 get_config = simple_config_getter(pkg_name)
 
