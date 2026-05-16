@@ -1,0 +1,4 @@
+oq.torch
+========
+.. automodule:: oq.torch
+   :members:

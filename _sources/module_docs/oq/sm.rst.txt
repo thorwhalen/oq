@@ -1,0 +1,4 @@
+oq.sm
+=====
+.. automodule:: oq.sm
+   :members:
